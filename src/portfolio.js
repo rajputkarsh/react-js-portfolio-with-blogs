@@ -534,9 +534,6 @@ const addBlogHeader = {
   description: "Generate elements for a blog using below given editor"
 };
 
-const data404 = {
-  image: '404-captain-america.png'
-}
 
 
 const documentTitles = {
@@ -565,6 +562,5 @@ export {
   blogsHeader,
   blogs,
   addBlogHeader,
-  data404,
   documentTitles,
 };

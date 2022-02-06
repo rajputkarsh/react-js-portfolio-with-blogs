@@ -2,11 +2,20 @@ import React from 'react';
 
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
-import { data404 } from '../../portfolio';
+
+import { style } from "glamor";
 
 import './NotFound.css';
 
 function NotFound(props) {
+
+    const styles = style({
+        backgroundColor: `${props.theme.accentBright}`,
+        ":hover": {
+            boxShadow: `0 5px 15px ${props.theme.accentBright}`,
+        },
+    });    
+
     return (
         <div className='not-found'>
             <Header theme={props.theme} setTheme={props.setTheme} />
@@ -21,12 +30,16 @@ function NotFound(props) {
                     </p>
                 </div>
                 <div className="not-found-image">
-                    <img src={require(`../../assests/images/${data404["image"]}`)} alt="" />
+                    <img src={require(`../../assests/images/404-captain-america.png`)} alt="" />
                 </div>
             </div>
-            <br />
-            <br />
-            <br />
+
+            <div className="go-back">
+                <button {...styles} className="general-btn" onClick={() => { window.open(window.location.protocol + "//" + document.location.host.toString(), "_self"); }}>
+                    Go Back
+                </button>                
+            </div>
+
             <br />
             <br />
             <Footer theme={props.theme} onToggle={props.onToggle} />            
