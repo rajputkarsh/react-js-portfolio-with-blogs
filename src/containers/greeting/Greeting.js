@@ -6,6 +6,7 @@ import { Fade } from "react-reveal";
 import { useNavigate } from "react-router-dom";
 import FeelingProud from "./FeelingProud";
 import { style } from "glamor";
+import Typewriter from 'typewriter-effect';
 
 export default function Greeting(props) {
   const theme = props.theme;
@@ -18,22 +19,28 @@ export default function Greeting(props) {
     },
   });
 
+  
   return (
     <Fade bottom duration={2000} distance="40px">
       <div className="greet-main" id="greeting">
         <div className="greeting-main">
           <div className="greeting-text-div">
             <div>
-              <h1 className="greeting-text">{greeting.title}</h1>
+              <h1 className="greeting-text">
+                {greeting.title}&nbsp;I'm&nbsp;
+                <Typewriter
+                  options={{
+                    strings: [greeting.full_name],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </h1>
               <div
                 className="greeting-text-p subTitle"
                 style={{ color: theme.secondaryText }}
-              >
-                <span>I'm </span>
-                <span style={{ color: theme.accentColor }}>
-                  {greeting.full_name}.{" "}
-                </span>
-                <ul>
+              >                
+                <ul type="none">
                   {
                     greeting.subTitle.map(
                       (subTitleText, index) => {

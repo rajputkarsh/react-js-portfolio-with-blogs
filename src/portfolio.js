@@ -9,16 +9,16 @@ const settings = {
 
 //Home Page
 const greeting = {
-  title: "Hello 👋",
+  title: "Hi",
   title2: "Utkarsh",
   logo_name: "<Utkarsh />",
   nickname: "Karsh",
   full_name: "Utkarsh",
   subTitle:
     [
-      "Full Stack Developer",
-      "Tech Enthusiast🔥",
-      "Always learning",
+      "Full Stack Developer 👨‍💻",
+      "Tech Enthusiast 🔥",
+      "Always learning 🎯",
     ],
   resumeLink:
     "",
@@ -498,7 +498,7 @@ const projects = {
 const contactPageData = {
   contactSection: {
     title: "Contact Me",
-    profile_image_path: "profile-pic-2.jpg",
+    profile_image_path: "profile-pic-2.webp",
     description:
       "You can contact me at the places mentioned below. I will try to get back to you as fast as I can. ",
   },

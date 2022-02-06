@@ -28,6 +28,7 @@
 }
 
 .greeting-text {
+  display: flex;
   margin-top: 110px;
   font-size: 70px;
   line-height: 5px;
@@ -69,6 +70,10 @@
   cursor: pointer;
 }
 
+.Typewriter{
+  color: #E3405F
+}
+
 /* Media Query */
 @media (max-width: 1380px) {
   .greeting-text {
@@ -84,6 +89,7 @@
   }
 }
 @media (max-width: 768px) {
+
   .button-greeting-div {
     justify-content: space-around;
   }
