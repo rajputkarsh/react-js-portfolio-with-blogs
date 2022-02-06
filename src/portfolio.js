@@ -534,6 +534,11 @@ const addBlogHeader = {
   description: "Generate elements for a blog using below given editor"
 };
 
+const data404 = {
+  image: '404-captain-america.png'
+}
+
+
 const documentTitles = {
   splash: "Utkarsh | Splash",
   home: "Utkarsh | Home",
@@ -560,5 +565,6 @@ export {
   blogsHeader,
   blogs,
   addBlogHeader,
-  documentTitles
+  data404,
+  documentTitles,
 };

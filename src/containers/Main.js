@@ -9,6 +9,7 @@ import Projects from "../pages/projects/Projects";
 import Blogs from "../pages/blogs/Blogs";
 import Blog from "../pages/blogs/Blog";
 import AddBlog from "../pages/blogs/AddBlog";
+import NotFound from "../pages/notFound/NotFound";
 import { settings } from "../portfolio.js";
 
 export default function Main(propss) {
@@ -114,6 +115,15 @@ export default function Main(propss) {
                 />
               }
             />
+            <Route 
+              path='*' 
+              element={
+              <NotFound 
+                theme={propss.theme}
+                setTheme={propss.setTheme}              
+              />
+              } 
+            />
           </Routes>
         </Router>
       </div>
@@ -199,6 +209,15 @@ export default function Main(propss) {
               path={ROOT_URL + "/add-blog"}
               element={
                 <AddBlog
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              }
+            />
+            <Route
+              path='*'
+              element={
+                <NotFound
                   theme={propss.theme}
                   setTheme={propss.setTheme}
                 />
