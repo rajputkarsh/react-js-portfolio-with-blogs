@@ -30,7 +30,7 @@
 .greeting-text {
   display: flex;
   margin-top: 110px;
-  font-size: 70px;
+  font-size: 64px;
   line-height: 5px;
   font-family: "Google Sans Bold";
 }

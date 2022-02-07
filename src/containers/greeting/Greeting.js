@@ -25,10 +25,10 @@ export default function Greeting(props) {
           <div className="greeting-text-div">
             <div>
               <h1 className="greeting-text">
-                {greeting.title}&nbsp;I'm&nbsp;
+                const name=
                 <Typewriter
                   options={{
-                    strings: [greeting.full_name],
+                    strings: [greeting.full_name+";"],
                     autoStart: true,
                     loop: true,
                   }}

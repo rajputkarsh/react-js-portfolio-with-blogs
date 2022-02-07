@@ -10,6 +10,7 @@
   line-height: 1.1;
   font-family: "Google Sans Regular";
   text-align: center;
+  margin-bottom: 0px;
 }
 
 .skills-text {
@@ -18,7 +19,6 @@
 
 .skills-text-div {
   margin-left: 50px;
-  padding-top: 80px;
   font-family: "Google Sans Regular";
 }
 

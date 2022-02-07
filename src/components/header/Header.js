@@ -147,12 +147,28 @@ function Header(props) {
                 Contact
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                className="gm"
+                to={ROOT_URL + "/games"}
+                tag={Link}
+                activeStyle={{ fontWeight: "bold" }}
+                style={{ borderRadius: 5, color: theme.text }}
+              >
+                Games
+              </NavLink>
+            </li>
             <button {...styles} onClick={changeTheme}>
               {icon}
             </button>
           </ul>
         </header>
       </div>
+      <div className="theme-button" onClick={changeTheme}>
+        <button {...styles}>
+          {icon}
+        </button>         
+      </div>     
     </Fade>
   );
 }

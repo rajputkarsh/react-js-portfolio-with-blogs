@@ -193,6 +193,18 @@
   color: #ffffff !important;
 }
 
+.gm {
+  margin: 2px 5px 20px;
+  transition: all 0.2s ease-in-out;
+  color: #ffffff;
+}
+
+.gm:hover {
+  box-shadow: 0 1px 10px #94B3CF;
+  background-color: #94B3CF;
+  color: #ffffff !important;
+}
+
 /* 48em = 768px */
 
 @media (min-width: 48em) {
@@ -212,7 +224,20 @@
   }
 }
 
+  .theme-button{
+    position: fixed;
+    z-index: 9999;
+    right: 20px;
+    bottom: 20px;
+    display: none;
+  }
+
 @media (max-width: 768px) {
+
+  .theme-button{
+    display: block;
+  }
+
   .header .logo {
     display: block;
     float: left;
