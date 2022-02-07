@@ -11,6 +11,8 @@ import Blog from "../pages/blogs/Blog";
 import AddBlog from "../pages/blogs/AddBlog";
 import NotFound from "../pages/notFound/NotFound";
 import { settings } from "../portfolio.js";
+import Games from "../containers/games/Games";
+import Game from "./games/Game";
 
 export default function Main(propss) {
 
@@ -115,6 +117,24 @@ export default function Main(propss) {
                 />
               }
             />
+            <Route
+              path={ROOT_URL + "/games"}
+              element={
+                <Games
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              }
+            />
+            <Route
+              path={ROOT_URL + "/game/:gameSlug"}
+              element={
+                <Game
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              }
+            />
             <Route 
               path='*' 
               element={
@@ -209,6 +229,24 @@ export default function Main(propss) {
               path={ROOT_URL + "/add-blog"}
               element={
                 <AddBlog
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              }
+            />
+            <Route
+              path={ROOT_URL + "/games"}
+              element={
+                <Games
+                  theme={propss.theme}
+                  setTheme={propss.setTheme}
+                />
+              }
+            />
+            <Route
+              path={ROOT_URL + "/game/:gameSlug"}
+              element={
+                <Game
                   theme={propss.theme}
                   setTheme={propss.setTheme}
                 />

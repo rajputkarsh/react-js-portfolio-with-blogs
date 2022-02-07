@@ -535,6 +535,15 @@ const addBlogHeader = {
 };
 
 
+const games = {
+  data: {
+    0: {
+      name: 'Tik Tak Toe',
+      url: 'tik-tak-toe',
+      description: "A game in which two players seek in alternate turns to complete a row, a column, or a diagonal with either three O's or three X's drawn in the spaces of a grid of nine squares; noughts and crosses."
+    }
+  }
+}
 
 const documentTitles = {
   splash: "Utkarsh | Splash",
@@ -546,6 +555,7 @@ const documentTitles = {
   blogs: "Utkarsh | Blogs",
   blog: "Utkarsh | Blog",
   contact: "Utkarsh | Contact",
+  games: "Utkarsh | Games",
 }
 
 export {
@@ -562,5 +572,6 @@ export {
   blogsHeader,
   blogs,
   addBlogHeader,
+  games,
   documentTitles,
 };
