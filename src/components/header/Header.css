@@ -253,8 +253,30 @@
     text-align: center;
   }
 }
+
+@media (max-width: 1050px) and (min-width: 960px) {
+  .menu li a {
+    padding: 10px;
+    /* margin: 0px; */
+    width: auto;
+  }
+}
+
+
 @media (max-width: 960px) and (min-width: 768px) {
   .header {
-    font-size: 12px;
+    font-size: 13px;
+  }
+  .header .logo {
+    /* font-size: 1.1em; */
+  }
+
+  .menu li {
+    width: auto;
+  }
+  .menu li a {
+    padding: 6px;
+    /* margin: 0px; */
+    width: auto;
   }
 }
