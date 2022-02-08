@@ -17,6 +17,7 @@
   /* text-align: center; */
 }
 
+
 .greeting-main > * {
   flex: 1;
   margin-bottom: 30px;
@@ -30,8 +31,10 @@
 .greeting-text {
   display: flex;
   margin-top: 110px;
-  font-size: 64px;
+  font-size: 60px;
   line-height: 5px;
+  justify-content: center;
+  align-items: center;
   font-family: "Google Sans Bold";
 }
 
@@ -49,7 +52,7 @@
 }
 
 .greeting-image-div > * {
-  max-width: 100%;
+  max-width: 45vw;
   height: auto;
 }
 
@@ -74,10 +77,13 @@
   color: #E3405F
 }
 
+
+
+
 /* Media Query */
 @media (max-width: 1380px) {
   .greeting-text {
-    font-size: 50px;
+    font-size: 45px;
   }
 
   .greeting-text-p {
@@ -94,7 +100,7 @@
     justify-content: space-around;
   }
   .greeting-text {
-    font-size: 30px;
+    font-size: 30px !important;
     margin-top: 0px;
     text-align: center;
   }

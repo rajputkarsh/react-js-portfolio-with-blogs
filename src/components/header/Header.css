@@ -230,6 +230,7 @@
     right: 20px;
     bottom: 20px;
     display: none;
+    margin: 0px;
   }
 
 @media (max-width: 768px) {
