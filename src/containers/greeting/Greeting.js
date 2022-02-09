@@ -25,10 +25,10 @@ export default function Greeting(props) {
           <div className="greeting-text-div">
             <div>
               <h1 className="greeting-text">
-                const name=
+                const name= <span className="colored-text">U</span>
                 <Typewriter
                   options={{
-                    strings: [greeting.full_name+";"],
+                    strings: [greeting.full_name.substring(1)+";"],
                     autoStart: true,
                     loop: true,
                   }}
@@ -48,17 +48,8 @@ export default function Greeting(props) {
                   }
                 </ul>
               </div>
-              <SocialMedia />
-              <div className="portfolio-repo-btn-div">
-                <button
-                  {...styles}
-                  className="button"
-                  onClick={() => {
-                    window.open("/contact", "_self");
-                  }}
-                >
-                  Contact Me
-                </button>
+              <div className="social-media-wrapper">
+                <SocialMedia />
               </div>
             </div>
           </div>
