@@ -21,13 +21,11 @@ function App() {
 
   return (
     <ThemeProvider theme={themes[usingTheme]}>
-      <>
         <GlobalStyles />
         <div>
           <Main theme={themes[usingTheme]} setTheme={setUsingTheme} />
           <ToastContainer />
         </div>
-      </>
     </ThemeProvider>
   );
 }

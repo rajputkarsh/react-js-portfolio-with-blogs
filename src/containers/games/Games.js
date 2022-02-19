@@ -12,12 +12,14 @@ function Games(props) {
     <div className='games-main'>
       <Header theme={props.theme} setTheme={props.setTheme} />
 
-      <div className="repo-cards-div-main">
-        {
-          Object.keys(games.data).map((key) => {
-            return <GameCard key={key} id={key} game={games.data[key]} url={games.data[key].url} theme={props.theme} />;
-          })
-        }
+      <div>
+        <div className="repo-cards-div-main">
+          {
+            Object.keys(games.data).map((key) => {
+              return <GameCard key={key} id={key} game={games.data[key]} url={games.data[key].url} theme={props.theme} />;
+            })
+          }
+        </div>         
       </div>
 
       <Footer theme={props.theme} onToggle={props.onToggle} />

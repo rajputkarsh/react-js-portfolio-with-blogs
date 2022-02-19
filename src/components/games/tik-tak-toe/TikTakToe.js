@@ -5,6 +5,8 @@ import Mode from './components/Mode'
 import SelectPlayer from './components/SelectPlayer';
 import { checkWinner, AImove } from './helper'
 
+import './TikTakToe.css';
+
 function TikTakToe( props ) {
   const [square, setSquare] = useState(Array(9).fill(null));
   const [mode, setMode] = useState(null)
@@ -32,7 +34,7 @@ function TikTakToe( props ) {
       changeTurn()
       setShowSquares(false)
       setWinner(null)
-    }, 2000);
+    }, 5000);
   }
 
   useEffect(() => {
@@ -98,11 +100,15 @@ function TikTakToe( props ) {
   }
 
   return (
-    <div>
+    <div className="tik-tak-toe-container">
       {
-        mode === null ? <Mode theme={props.theme} setTheme={props.setTheme} clickHumanBtn={clickHumanBtn} clickAIBtn={clickAIBtn} />
-          : Turn ? <Board clickExit={clickExit} playAgain={playAgain} ShowSquares={ShowSquares} mode={mode} Winner={Winner} Turn={Turn} AI={AI} squares={square} onClick={handleClick} xScore={ScoreX} oScore={ScoreO} WinningSquares={WinningSquares} />
-            : <SelectPlayer oClick={oPlayerSelect} xClick={xPlayerSelect} />
+        mode === null ? 
+          <Mode theme={props.theme} setTheme={props.setTheme} clickHumanBtn={clickHumanBtn} clickAIBtn={clickAIBtn} />
+        : 
+          Turn ? 
+            <Board clickExit={clickExit} playAgain={playAgain} ShowSquares={ShowSquares} mode={mode} Winner={Winner} Turn={Turn} AI={AI} squares={square} onClick={handleClick} xScore={ScoreX} oScore={ScoreO} WinningSquares={WinningSquares} />
+          : 
+            <SelectPlayer oClick={oPlayerSelect} xClick={xPlayerSelect} mode={mode} />
       }
     </div>
   )

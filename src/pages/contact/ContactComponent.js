@@ -31,10 +31,10 @@ function Contact(props) {
   const openResume = (url) => {
     if(url == "" || url == undefined || url == null){
       if(theme.name == "light"){
-        toast("Oops ! This action is not available");
+        toast("We'll get back to you..");
       }
       else {
-        toast.dark("Oops ! This action is not available");
+        toast.dark("We'll get back to you..");
       }
     }
     else{

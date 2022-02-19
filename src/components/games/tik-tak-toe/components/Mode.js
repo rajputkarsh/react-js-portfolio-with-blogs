@@ -3,8 +3,6 @@ import Title from '../elements/Title'
 import styled from 'styled-components'
 import GreenButton from '../elements/GreenButton'
 
-import './Mode.css'
-
 const Credit=styled.div`
     @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
     color: white;
