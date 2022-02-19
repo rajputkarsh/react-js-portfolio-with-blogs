@@ -5,9 +5,16 @@ import { documentTitles, experience } from "../../portfolio.js";
 import { Fade } from "react-reveal";
 import ExperienceImg from "./ExperienceImg";
 
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { firebaseConfig } from "../../backend"; 
+
 function Experience(props) {
 
   document.title = documentTitles.experience;
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 
   const theme = props.theme;
   return (

@@ -2,13 +2,22 @@ import React from 'react';
 import Header from '../../components/header/Header';
 import NotFoundContent from "../../pages/notFound/NotFoundContent";
 import { useParams } from 'react-router-dom';
-
-import './Game.css';
 import TikTakToe from '../../components/games/tik-tak-toe/TikTakToe';
+import { documentTitles } from '../../portfolio';
+import './Game.css';
+
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { firebaseConfig } from "../../backend"; 
 
 function Game(props) {
 
     const { gameSlug } = useParams();
+
+    document.title = documentTitles.games + " | " + gameSlug;
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
 
     const getGameComponent = (gameUrl) => {
         switch(gameUrl){

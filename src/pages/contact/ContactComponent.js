@@ -10,6 +10,10 @@ import { Button } from "react-bootstrap";
 
 import { toast } from 'react-toastify';
 
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { firebaseConfig } from "../../backend"; 
+
 
 const ContactData = contactPageData.contactSection;
 const blogSection = contactPageData.blogSection;
@@ -17,6 +21,9 @@ const blogSection = contactPageData.blogSection;
 function Contact(props) {
 
   document.title = documentTitles.contact;
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 
   const theme = props.theme;
 

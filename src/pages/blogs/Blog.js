@@ -3,14 +3,21 @@ import Header from "../../components/header/Header";
 import { Fade } from "react-reveal";
 import { useParams } from 'react-router-dom';
 import "./Blog.css";
-import {  blogs, documentTitles } from "../../portfolio.js";
+import { blogs, documentTitles } from "../../portfolio.js";
+
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { firebaseConfig } from "../../backend"; 
 
 function Blogs(props) {
 
     const { blogSlug } = useParams();
     const theme = props.theme;
 
-    document.title = documentTitles.blog + " | "+blogSlug;
+    document.title = documentTitles.blog + " | " + blogSlug;
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
 
     return (
         <div className="blogs-main">

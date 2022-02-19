@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import "./Splash.css";
 import { documentTitles } from "../../portfolio";
+import "./Splash.css";
 
 function AnimatedSplash(props) {
 
   document.title = documentTitles.splash;
+
+
+
 
   return (
     <div className="logo_wrapper">

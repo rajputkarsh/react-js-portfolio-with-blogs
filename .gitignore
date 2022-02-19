@@ -26,3 +26,4 @@ package - Copy.json
 .firebaserc
 firebase.json
 .firebase*
+backend.js

@@ -1,5 +1,5 @@
 
-/* Change this file to get your personal Porfolio */
+/* Change this file to get your personal Portfolio */
 
 // Website related settings
 const settings = {
@@ -36,7 +36,7 @@ const socialMediaLinks = {
 const skills = {
   data: [
     {
-      title: "Full Stack Development",
+      title: "I'm a Full Stack developer who loves to explore every bit of technology.",
       fileName: "FullStackImg",
       skills: [
         "⚡ Developing responsive web applications",

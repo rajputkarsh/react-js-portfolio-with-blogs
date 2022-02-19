@@ -7,9 +7,17 @@ import "./Projects.css";
 import ProjectsImg from "./ProjectsImg";
 import { style } from "glamor";
 
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { firebaseConfig } from "../../backend"; 
+
+
 function Projects(props) {
 
   document.title = documentTitles.projects;
+  
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 
   const theme = props.theme;
 

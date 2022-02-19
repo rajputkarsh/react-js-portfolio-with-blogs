@@ -8,9 +8,16 @@ import "./EducationComponent.css";
 import { Fade } from "react-reveal";
 import { documentTitles } from "../../portfolio";
 
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { firebaseConfig } from "../../backend"; 
+
 function Education(props) {
 
   document.title = documentTitles.education;
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 
   const theme = props.theme;
   return (

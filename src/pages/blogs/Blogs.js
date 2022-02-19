@@ -6,9 +6,16 @@ import BlogCard from "../../components/BlogCard/BlogCard";
 import { blogsHeader, blogs, documentTitles } from "../../portfolio.js";
 import { style } from "glamor";
 
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { firebaseConfig } from "../../backend"; 
+
 function Blogs(props) {
 
     document.title = documentTitles.blogs;
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
 
     const theme = props.theme;
 

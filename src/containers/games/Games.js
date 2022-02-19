@@ -1,12 +1,20 @@
 import React from 'react';
 import Header from '../../components/header/Header';
 import GameCard from '../../components/gameCard/GameCard';
-
-import { games } from '../../portfolio';
-
 import './Games.css';
+import { games, documentTitles } from '../../portfolio';
+
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { firebaseConfig } from "../../backend"; 
 
 function Games(props) {
+
+  document.title = documentTitles.games;
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
   return (
     <div className='games-main'>
       <Header theme={props.theme} setTheme={props.setTheme} />
