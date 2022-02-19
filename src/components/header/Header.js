@@ -39,7 +39,7 @@ function Header(props) {
 
 
   function changeTheme() {
-    if (props.theme.name == "light") {
+    if (props.theme.name === "light") {
       localStorage.setItem("theme", "dark");
       document.body.className = "dark";
       props.setTheme("dark");

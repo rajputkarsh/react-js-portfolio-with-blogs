@@ -4,19 +4,10 @@ import SocialMedia from "../../components/socialMedia/SocialMedia";
 import { greeting } from "../../portfolio";
 import { Fade } from "react-reveal";
 import FeelingProud from "./FeelingProud";
-import { style } from "glamor";
 import Typewriter from 'typewriter-effect';
 
 export default function Greeting(props) {
   const theme = props.theme;
-
-  const styles = style({
-    backgroundColor: `${theme.accentBright}`,
-    ":hover": {
-      boxShadow: `0 5px 15px ${theme.accentBright}`,
-    },
-  });
-
   
   return (
     <Fade bottom duration={2000} distance="40px">

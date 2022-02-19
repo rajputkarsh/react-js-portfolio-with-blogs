@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function EducationImg(props) {
-  const theme = props.theme;
   return (
     <svg 
       id="education_girl"

@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../../components/header/Header";
 import Greeting from "../../containers/greeting/Greeting";
 import Skills from "../../containers/skills/Skills";
-import Footer from "../../components/footer/Footer";
 import { documentTitles } from "../../portfolio";
 
 function Home(props) {

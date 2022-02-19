@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../../components/header/Header';
-import Footer from '../../components/footer/Footer';
+import NotFoundContent from "../../pages/notFound/NotFoundContent";
 import { useParams } from 'react-router-dom';
 
 import './Game.css';
@@ -13,6 +13,8 @@ function Game(props) {
     const getGameComponent = (gameUrl) => {
         switch(gameUrl){
             case 'tik-tak-toe' : return <TikTakToe theme={props.theme} setTheme={props.setTheme} />;
+
+            default: return <NotFoundContent theme={props.theme} setTheme={props.setTheme} />
         }
     }
 

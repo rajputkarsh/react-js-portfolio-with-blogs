@@ -19,9 +19,9 @@ function TikTakToe( props ) {
   const [ShowSquares, setShowSquares] = useState(true)
 
   useEffect(() => {
-    if (mode && AI == Turn) {
-      console.log(AImove(square, AI, AI == 'X' ? 'O' : 'X'));
-      handleClick(AImove(square, AI, AI == 'X' ? 'O' : 'X'))
+    if (mode && AI === Turn) {
+      console.log(AImove(square, AI, AI === 'X' ? 'O' : 'X'));
+      handleClick(AImove(square, AI, AI === 'X' ? 'O' : 'X'))
     }
     const winner = checkWinner(square)
     setWinner(winner ? winner[0] : winner)
@@ -34,7 +34,7 @@ function TikTakToe( props ) {
       changeTurn()
       setShowSquares(false)
       setWinner(null)
-    }, 5000);
+    }, 2000);
   }
 
   useEffect(() => {

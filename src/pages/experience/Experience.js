@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
 import "./Experience.css";
 import { documentTitles, experience } from "../../portfolio.js";
 import { Fade } from "react-reveal";

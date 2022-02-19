@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Splash.css";
-import { Redirect } from "react-router-dom";
 import { documentTitles } from "../../portfolio";
 
 function AnimatedSplash(props) {

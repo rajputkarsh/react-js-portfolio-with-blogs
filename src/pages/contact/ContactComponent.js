@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import BlogsImg from "./BlogsImg";
 import { Fade } from "react-reveal";
@@ -29,8 +28,8 @@ function Contact(props) {
   });
 
   const openResume = (url) => {
-    if(url == "" || url == undefined || url == null){
-      if(theme.name == "light"){
+    if(url === "" || url === undefined || url == null){
+      if(theme.name === "light"){
         toast("We'll get back to you..");
       }
       else {

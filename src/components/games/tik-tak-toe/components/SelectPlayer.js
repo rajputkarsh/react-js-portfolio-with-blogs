@@ -1,5 +1,4 @@
 import React from 'react'
-import Title from '../elements/Title'
 import Button from '../elements/Button'
 function SelectPlayer({ xClick, oClick, mode}) {
     return (

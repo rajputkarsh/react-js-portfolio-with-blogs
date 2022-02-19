@@ -1,11 +1,10 @@
 import React, {useState} from "react";
 import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
+
 import { Fade } from "react-reveal";
 import { addBlogHeader, documentTitles } from "../../portfolio.js";
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import { style } from "glamor";
 import { Button } from "react-bootstrap";
 import { toast } from 'react-toastify';
 
@@ -17,19 +16,12 @@ function AddBlog(props) {
 
     const theme = props.theme;
 
-    const styles = style({
-        backgroundColor: `${theme.accentBright}`,
-        ":hover": {
-            boxShadow: `0 5px 15px ${theme.accentBright}`,
-        },
-    });
-
     const [blogText, setBlogText] = useState('');
     const [isTextShowing, setIsTextShowing] = useState(false);
 
     const copyTextToClipboard = () => {
         navigator.clipboard.writeText(blogText);
-        if (theme.name == "light") {
+        if (theme.name === "light") {
             toast("Text Copied!");
         }
         else {
