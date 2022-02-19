@@ -32,6 +32,10 @@ body {
   color: #868e96;
 }
 
+.content-wrapper{
+  min-height: 95vh;
+}
+
 /* Animations */
 @keyframes fade_down {
   0% {

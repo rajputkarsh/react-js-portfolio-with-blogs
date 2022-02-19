@@ -7,6 +7,7 @@ import { GlobalStyles } from "./global";
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from "./components/footer/Footer";
 
 
 function App() {
@@ -22,10 +23,11 @@ function App() {
   return (
     <ThemeProvider theme={themes[usingTheme]}>
         <GlobalStyles />
-        <div>
+        <div className="content-wrapper">
           <Main theme={themes[usingTheme]} setTheme={setUsingTheme} />
           <ToastContainer />
         </div>
+      <Footer theme={themes[usingTheme]} setTheme={setUsingTheme} />
     </ThemeProvider>
   );
 }

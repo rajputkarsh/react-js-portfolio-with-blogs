@@ -89,8 +89,6 @@ function AddBlog(props) {
                     ""
                 )
             }
-
-            <Footer theme={props.theme} onToggle={props.onToggle} />
         </div>
     );
 }

@@ -100,7 +100,6 @@ function Contact(props) {
           </div>
         </Fade>
       </div>
-      <Footer theme={props.theme} onToggle={props.onToggle} />
     </div>
   );
 }

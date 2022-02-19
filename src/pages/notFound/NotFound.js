@@ -38,11 +38,7 @@ function NotFound(props) {
                 <button {...styles} className="general-btn" onClick={() => { window.open(window.location.protocol + "//" + document.location.host.toString(), "_self"); }}>
                     Go Back
                 </button>                
-            </div>
-
-            <br />
-            <br />
-            <Footer theme={props.theme} onToggle={props.onToggle} />            
+            </div>      
         </div>     
     );
 }

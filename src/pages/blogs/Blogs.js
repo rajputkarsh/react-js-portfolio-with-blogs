@@ -54,13 +54,7 @@ function Blogs(props) {
                     })
                 }
             </div>
-            <br />
-            <br />
-            <br />
 
-            <br />
-            <br />
-            <Footer theme={props.theme} onToggle={props.onToggle} />
         </div>
     );
 }

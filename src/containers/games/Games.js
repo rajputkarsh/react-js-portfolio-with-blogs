@@ -21,8 +21,6 @@ function Games(props) {
           }
         </div>         
       </div>
-
-      <Footer theme={props.theme} onToggle={props.onToggle} />
     </div>
   )
 }

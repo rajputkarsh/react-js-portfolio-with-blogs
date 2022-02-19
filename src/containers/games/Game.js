@@ -25,8 +25,6 @@ function Game(props) {
                     getGameComponent(gameSlug)
                 }
             </div>
-
-            <Footer theme={props.theme} onToggle={props.onToggle} />
         </div>
     )
 }

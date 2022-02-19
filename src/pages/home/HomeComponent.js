@@ -16,7 +16,6 @@ function Home(props) {
         <Greeting theme={props.theme} />
         <Skills theme={props.theme} />        
       </div>
-      <Footer theme={props.theme} />
     </div>
   );
 }
