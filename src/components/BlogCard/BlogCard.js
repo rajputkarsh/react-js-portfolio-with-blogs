@@ -1,5 +1,5 @@
 import React from "react";
-import "./BlogCard.css";
+import "./BlogCard.modules.css";
 import { Fade } from "react-reveal";
 import { style } from "glamor";
 

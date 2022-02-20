@@ -4,7 +4,7 @@ import Header from "../../components/header/Header";
 import Educations from "../../containers/education/Educations";
 import Certifications from "../../containers/certifications/Certifications";
 import EducationImg from "./EducationImg";
-import "./EducationComponent.css";
+import "./EducationComponent.modules.css";
 import { Fade } from "react-reveal";
 import { documentTitles } from "../../portfolio";
 
@@ -17,7 +17,7 @@ function Education(props) {
   document.title = documentTitles.education;
 
   const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  getAnalytics(app);
 
   const theme = props.theme;
   return (

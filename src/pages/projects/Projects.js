@@ -3,7 +3,7 @@ import Header from "../../components/header/Header";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import { Fade } from "react-reveal";
 import { projectsHeader, projects, documentTitles } from "../../portfolio.js";
-import "./Projects.css";
+import "./Projects.modules.css";
 import ProjectsImg from "./ProjectsImg";
 import { style } from "glamor";
 
@@ -17,7 +17,7 @@ function Projects(props) {
   document.title = documentTitles.projects;
   
   const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  getAnalytics(app);
 
   const theme = props.theme;
 

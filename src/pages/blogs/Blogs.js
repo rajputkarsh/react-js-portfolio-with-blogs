@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../components/header/Header";
 import { Fade } from "react-reveal";
-import "./Blogs.css";
+import "./Blogs.modules.css";
 import BlogCard from "../../components/BlogCard/BlogCard";
 import { blogsHeader, blogs, documentTitles } from "../../portfolio.js";
 import { style } from "glamor";
@@ -15,7 +15,7 @@ function Blogs(props) {
     document.title = documentTitles.blogs;
 
     const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
+    getAnalytics(app);
 
     const theme = props.theme;
 

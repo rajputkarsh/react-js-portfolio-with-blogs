@@ -1,7 +1,7 @@
 import React from 'react';
 import { style } from "glamor";
 
-import './NotFound.css';
+import './NotFound.modules.css';
 
 function NotFoundContent(props) {
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "./FeelingProud.css";
+import "./FeelingProud.modules.css";
 
 function FeelingProud(props) {
   return (

@@ -36,7 +36,6 @@
   font-family: "Google Sans Medium";
   line-height: 1.1;
   text-align: center;
-  margin-top: 80px;
 }
 
 .blog-add-heading-sub-text {
@@ -67,7 +66,6 @@
 @media (max-width: 1380px) {
   .blog-add-heading-text {
     font-size: 50px;
-    margin-top: 80px;
   }
   .blog-add-heading-sub-text {
     font-size: 25px;
@@ -97,11 +95,39 @@
   }
 
   .repo-cards-div-main {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 30px;
   }
+}
+
+.add-blog-details{
+  width: 100vw;
+}
+
+.add-blog-form{
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.form-group{
+  text-align: left;
+}
+
+.left-padded{
+  padding-left:20px
+}
+
+.add-blog-buttons{
+  margin-top: 50px;
+}
+
+.generatedHTML{
+  margin: 10px 40px;
+  padding: 10px 0px;
+  border: 2px solid #a82e38 ;
+  border-radius: 10px;
 }
 
 .button {
@@ -135,5 +161,15 @@
 
 .showButton:hover {
   background-color: #a82e38;
+  color: white !important;
+}
+
+.publishButton {
+  color: black; 
+  border: 2px solid #7418a8;
+}
+
+.publishButton:hover {
+  background-color: #7418a8;
   color: white !important;
 }

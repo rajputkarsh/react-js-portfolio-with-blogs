@@ -529,10 +529,6 @@ const blogs = {
   }
 }
 
-const addBlogHeader = {
-  title: "Add a new Blog",
-  description: "Generate elements for a blog using below given editor"
-};
 
 
 const games = {
@@ -571,7 +567,6 @@ export {
   projects,
   blogsHeader,
   blogs,
-  addBlogHeader,
   games,
   documentTitles,
 };

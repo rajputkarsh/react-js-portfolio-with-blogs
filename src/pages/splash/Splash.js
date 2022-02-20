@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { documentTitles } from "../../portfolio";
-import "./Splash.css";
+import "./Splash.modules.css";
 
 function AnimatedSplash(props) {
 

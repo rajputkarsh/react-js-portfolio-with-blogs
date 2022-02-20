@@ -4,7 +4,7 @@ import Header from "../../components/header/Header";
 
 import { style } from "glamor";
 
-import './NotFound.css';
+import './NotFound.modules.css';
 
 function NotFound(props) {
 

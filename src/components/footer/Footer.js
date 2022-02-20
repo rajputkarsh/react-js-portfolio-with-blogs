@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css";
+import "./Footer.modules.css";
 import { Fade } from "react-reveal";
 import { greeting } from "../../portfolio.js";
 

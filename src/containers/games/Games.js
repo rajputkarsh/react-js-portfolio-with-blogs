@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../../components/header/Header';
 import GameCard from '../../components/gameCard/GameCard';
-import './Games.css';
+import './Games.modules.css';
 import { games, documentTitles } from '../../portfolio';
 
 import { initializeApp } from "firebase/app";
@@ -13,7 +13,7 @@ function Games(props) {
   document.title = documentTitles.games;
 
   const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  getAnalytics(app);
 
   return (
     <div className='games-main'>

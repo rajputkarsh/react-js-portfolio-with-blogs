@@ -1,5 +1,5 @@
 import React from "react";
-import "./CertificationCard.css";
+import "./CertificationCard.modules.css";
 import { Fade } from "react-reveal";
 import { style } from "glamor";
 

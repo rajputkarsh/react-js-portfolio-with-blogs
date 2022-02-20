@@ -5,7 +5,7 @@ import Mode from './components/Mode'
 import SelectPlayer from './components/SelectPlayer';
 import { checkWinner, AImove } from './helper'
 
-import './TikTakToe.css';
+import './TikTakToe.modules.css';
 
 function TikTakToe( props ) {
   const [square, setSquare] = useState(Array(9).fill(null));

@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../components/header/Header";
 import { Fade } from "react-reveal";
 import { useParams } from 'react-router-dom';
-import "./Blog.css";
+import "./Blog.modules.css";
 import { blogs, documentTitles } from "../../portfolio.js";
 
 import { initializeApp } from "firebase/app";
@@ -17,7 +17,7 @@ function Blogs(props) {
     document.title = documentTitles.blog + " | " + blogSlug;
 
     const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
+    getAnalytics(app);
 
     return (
         <div className="blogs-main">

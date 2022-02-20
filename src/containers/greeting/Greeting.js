@@ -1,5 +1,5 @@
 import React from "react";
-import "./Greeting.css";
+import "./Greeting.modules.css";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import { greeting } from "../../portfolio";
 import { Fade } from "react-reveal";

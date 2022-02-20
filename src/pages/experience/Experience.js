@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../components/header/Header";
-import "./Experience.css";
+import "./Experience.modules.css";
 import { documentTitles, experience } from "../../portfolio.js";
 import { Fade } from "react-reveal";
 import ExperienceImg from "./ExperienceImg";
@@ -14,7 +14,7 @@ function Experience(props) {
   document.title = documentTitles.experience;
 
   const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  getAnalytics(app);
 
   const theme = props.theme;
   return (

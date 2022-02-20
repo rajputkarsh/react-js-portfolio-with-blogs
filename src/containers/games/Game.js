@@ -4,7 +4,7 @@ import NotFoundContent from "../../pages/notFound/NotFoundContent";
 import { useParams } from 'react-router-dom';
 import TikTakToe from '../../components/games/tik-tak-toe/TikTakToe';
 import { documentTitles } from '../../portfolio';
-import './Game.css';
+import './Game.modules.css';
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -17,7 +17,7 @@ function Game(props) {
     document.title = documentTitles.games + " | " + gameSlug;
 
     const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
+    getAnalytics(app);
 
     const getGameComponent = (gameUrl) => {
         switch(gameUrl){

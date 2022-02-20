@@ -1,5 +1,5 @@
 import React from "react";
-import "./GameCard.css";
+import "./GameCard.modules.css";
 import { Fade } from "react-reveal";
 import { style } from "glamor";
 

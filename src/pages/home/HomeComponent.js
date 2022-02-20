@@ -13,7 +13,7 @@ function Home(props) {
   document.title = documentTitles.home;
 
   const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  getAnalytics(app);
 
   return (
     <div>

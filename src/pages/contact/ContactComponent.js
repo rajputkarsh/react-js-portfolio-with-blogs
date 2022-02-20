@@ -3,7 +3,7 @@ import Header from "../../components/header/Header";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import BlogsImg from "./BlogsImg";
 import { Fade } from "react-reveal";
-import "./ContactComponent.css";
+import "./ContactComponent.modules.css";
 import { greeting, contactPageData, documentTitles } from "../../portfolio.js";
 import { style } from "glamor";
 import { Button } from "react-bootstrap";
@@ -23,7 +23,7 @@ function Contact(props) {
   document.title = documentTitles.contact;
 
   const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  getAnalytics(app);
 
   const theme = props.theme;
 
