@@ -518,19 +518,6 @@ const blogsHeader = {
   link: "https://www.linkedin.com/in/utkarsh-rajput/",
 }
 
-const blogs = {
-  data: {
-    "how-to-start-a-blog-in-2022": {
-      id: 0,
-      name: "How to start a blog in 2022",
-      description: "The blog talks about how a beginner can start blogging in 2022 without much hastle",
-      content: `<h2>Create A Blog In 20 Minutes</h2><p style="user-select: auto;"><em style="color: rgb(128, 128, 128);">Updated January 16, 2022</em></p><p style="user-select: auto;">Are you looking for an easy guide on&nbsp;<strong>how to start a blog</strong>?</p><p style="user-select: auto;">The step-by-step guide on this page will show you how to create a blog in 20 minutes with&nbsp;<em>just the most basic computer skills.</em></p><p style="user-select: auto;">After completing this guide you will have a beautiful blog that is ready to share with the world.</p><p style="user-select: auto;">This guide is made especially for beginners. I will walk you through each and every step, using plenty of pictures and videos to make it all perfectly clear.</p><p style="user-select: auto;">If you get stuck or have questions at any point, simply&nbsp;<a href="https://www.theblogstarter.com/contact-me/" rel="noopener noreferrer" target="_blank" style="color: rgb(37, 115, 164); background-color: transparent;">send me a message</a>&nbsp;and I will do my best to help you out.</p><p style="user-select: auto;"><strong>Ready to start?</strong>&nbsp;<a href="https://www.theblogstarter.com/#step1" rel="noopener noreferrer" target="_blank" style="color: rgb(37, 115, 164); background-color: transparent;"><strong>Click here to skip the intro and start building your blog now</strong></a></p><p style="user-select: auto;"><a href="https://www.theblogstarter.com/#step1" rel="noopener noreferrer" target="_blank" style="color: rgb(37, 115, 164); background-color: transparent;"><img src="https://www.theblogstarter.com/wp-content/uploads/2020/12/how-to-create-a-blog.jpg" alt="How to start a blog for beginners " height="450" width="300"></a></p><p style="user-select: auto;">My name is Scott Chow, and I am going to show you how to start blogging today. I have been building blogs and websites since 2002. In that time I have launched several of my own blogs, and helped hundreds of others do the same.</p><p style="user-select: auto;">I know that starting a blog can seem overwhelming and intimidating.&nbsp;<strong>This free guide is all about blogging for beginners</strong>, and will teach you how to become a blogger with just the most basic computer skills. So whether you’re 8 or 88, you can create your own blog in 20 minutes.</p><p style="user-select: auto;">I am not ashamed to admit that when I was first learning how to build a blog I made a ton of mistakes. You can benefit from more than a decade of my experience so that you don’t repeat these same mistakes when you make your own blog. I created this free guide so that a complete beginner can learn how to blog quickly and easily.</p><p style="user-select: auto;">So, just&nbsp;<em>how do you start a blog?</em></p><p style="user-select: auto;">Learn how to create a blog in about 20 minutes following these steps:</p><p style="user-select: auto;"><br></p><h2>How to Start a Blog in 6 Steps</h2><ol><li><a href="https://www.theblogstarter.com/#step1" rel="noopener noreferrer" target="_blank" style="color: rgb(37, 115, 164); background-color: transparent;">Pick a blog name.</a>&nbsp;Choose a descriptive name for your blog.</li><li><a href="https://www.theblogstarter.com/#step2" rel="noopener noreferrer" target="_blank" style="color: rgb(37, 115, 164); background-color: transparent;">Get your blog online.</a>&nbsp;Register your blog and get hosting.</li><li><a href="https://www.theblogstarter.com/#step3" rel="noopener noreferrer" target="_blank" style="color: rgb(37, 115, 164); background-color: transparent;">Customize your blog.</a>&nbsp;Choose a free blog design template and tweak it.</li><li><a href="https://www.theblogstarter.com/#step4" rel="noopener noreferrer" target="_blank" style="color: rgb(37, 115, 164); background-color: transparent;">Write &amp; publish your first post.</a>&nbsp;Share your thoughts with the world. The fun part!</li><li><a href="https://www.theblogstarter.com/#step5" rel="noopener noreferrer" target="_blank" style="color: rgb(37, 115, 164); background-color: transparent;">Promote your blog.</a>&nbsp;Get more people to read your blog with the proper marketing.</li><li><a href="https://www.theblogstarter.com/#step6" rel="noopener noreferrer" target="_blank" style="color: rgb(37, 115, 164); background-color: transparent;">Make money blogging.</a>&nbsp;Choose from several options to monetize your blog.</li></ol><p style="user-select: auto;"><br></p>`,
-    },
-  }
-}
-
-
-
 const games = {
   data: {
     0: {
@@ -566,7 +553,6 @@ export {
   contactPageData,
   projects,
   blogsHeader,
-  blogs,
   games,
   documentTitles,
 };

@@ -7,7 +7,7 @@ import { blogsHeader, documentTitles } from "../../portfolio.js";
 import { style } from "glamor";
 
 import { initializeApp } from "firebase/app";
-import { getFirestore, Timestamp, doc, setDoc, collection, getDocs } from "firebase/firestore";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
 import { firebaseConfig } from "../../backend"; 
 
