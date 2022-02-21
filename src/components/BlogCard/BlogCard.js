@@ -3,7 +3,7 @@ import "./BlogCard.modules.css";
 import { Fade } from "react-reveal";
 import { style } from "glamor";
 
-export default function BlogCard({ blog, url, theme }) {
+export default function BlogCard({ blog, theme }) {
   function openRepoinNewTab(url) {
     var win = window.open(url, "_blank");
     win.focus();
@@ -29,12 +29,12 @@ export default function BlogCard({ blog, url, theme }) {
         <div
           {...styles}
           key={blog.id}
-          onClick={() => openRepoinNewTab("blog/"+url)}
+          onClick={() => openRepoinNewTab("blog/"+blog.slug)}
           style={{ backgroundColor: theme.projectCard }}
         >
           <div className="blog-name-div">
             <p className="blog-name" style={{ color: theme.text }}>
-              {blog.name}
+              {blog.title}
             </p>
           </div>
           <p className="blog-description" style={{ color: theme.text }}>

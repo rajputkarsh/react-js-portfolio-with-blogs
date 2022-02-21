@@ -30,6 +30,8 @@ function AddBlog(props) {
 
     const [blogTitle, setBlogTitle] = useState("");
 
+    const [blogDescription, setBlogDescription] = useState("");
+
     const [blogSlug, setBlogSlug] = useState("");
 
     const [blogText, setBlogText] = useState("");
@@ -63,10 +65,16 @@ function AddBlog(props) {
             return false;
         }
 
+        if (blogDescription === "" || blogDescription === null || blogDescription === undefined) {
+            showToast("Please enter Blog Description");
+            return false;
+        }
+
         if (blogText === "" || blogText === null || blogText === undefined) {
             showToast("Please enter Blog Text");
             return false;
         }
+
         return true;
     }
 
@@ -81,7 +89,6 @@ function AddBlog(props) {
         }
             
         const blogs = collection(database, "blogs");
-        console.log(blogs);
         let blogSnapshot = getDocs(blogs);
 
         blogSnapshot.then((snapshot) => {
@@ -103,16 +110,18 @@ function AddBlog(props) {
                 const docRef = doc(database, "blogs", blogSlug);
 
                 setDoc(docRef, {
-                    title: blogTitle,
-                    content: blogText,
-                    status: true,
-                    dateAdded: Timestamp.fromDate(new Date()),
-                    dateUpdated: Timestamp.fromDate(new Date())
+                    title       : blogTitle,
+                    description : blogDescription,
+                    content     : blogText,
+                    status      : true,
+                    dateAdded   : Timestamp.fromDate(new Date()),
+                    dateUpdated : Timestamp.fromDate(new Date())
                 })
 
                 setBlogTitle("");
                 setBlogSlug("");
                 setBlogText("");
+                setBlogDescription("");
 
                 showToast("Blog Published");
             }
@@ -170,7 +179,11 @@ function AddBlog(props) {
                     </Form.Group>
                     <Form.Group controlId="formGroupBlogSlug">
                         <Form.Label className="left-padded">Blog Slug</Form.Label>
-                        <Form.Control type="text" value={blogSlug}  onChange={(e) => {setBlogSlug(e.target.value)}}  placeholder="Blog Slug" />
+                        <Form.Control type="text" value={blogSlug} onChange={(e) => { setBlogSlug(e.target.value) }} placeholder="Blog Slug" />
+                    </Form.Group>
+                    <Form.Group controlId="formGroupBlogDescription">
+                        <Form.Label className="left-padded">Blog Description</Form.Label>
+                        <Form.Control type="text" value={blogDescription} onChange={(e) => { setBlogDescription(e.target.value) }} placeholder="Blog Description" />
                     </Form.Group>
                 </Form>
             </div>
