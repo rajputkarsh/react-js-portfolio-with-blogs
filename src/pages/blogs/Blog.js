@@ -6,7 +6,7 @@ import "./Blog.modules.css";
 import { documentTitles } from "../../portfolio.js";
 
 import { initializeApp } from "firebase/app";
-import { getFirestore, Timestamp, doc, getDoc } from "firebase/firestore";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
 import { firebaseConfig } from "../../backend"; 
 import { useEffect } from "react";
@@ -32,8 +32,6 @@ function Blogs(props) {
             const blogSnapshot = getDoc(blogRef)
                 .then((blogData) => {
                     blogContent[blogSlug] = blogData.data();
-                    console.log(new Date(blogContent[blogSlug].dateUpdated.seconds*1000));
-                    console.log((blogContent[blogSlug].dateUpdated.seconds));
                     setBlog(blogContent);
                     setBlogFetched(true);
                 })
@@ -55,11 +53,11 @@ function Blogs(props) {
                             <>
                                 <div className="blogs-heading-div">
                                     <div className="blogs-heading-text-div">
-                                            <h1>{blog[blogSlug].title}</h1>
+                                            <h1><strong>{blog[blogSlug].title}</strong></h1>
                                     </div>
                                 </div>
                                 <div className="blogs-updated-date-div">
-                                        <span>Updated On - {} </span>
+                                        <span>Updated On - {new Intl.DateTimeFormat('en-IN', { dateStyle: 'full', timeStyle: 'long' }).format(new Date(blog[blogSlug].dateUpdated.seconds * 1000))} </span>
                                 </div>
 
                                 <br />
@@ -68,7 +66,7 @@ function Blogs(props) {
                                 </div>
                             </>                            
                         )
-                        : "Loading"
+                        : ""
                     }
 
                 </Fade>

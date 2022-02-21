@@ -42,6 +42,16 @@
   font-family: "Google Sans Medium";
 }
 
+.blogs-updated-date-div{
+  text-align: left;
+  font-size: small;
+  font-style: oblique;
+}
+
+.blog-text img{
+  max-width: 100%;
+}
+
 .repo-cards-div-main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));

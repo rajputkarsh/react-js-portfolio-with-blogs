@@ -85,7 +85,7 @@ function Blogs(props) {
                             )
                         )
                     : 
-                    "Loading"
+                    ""
                 }
             </div>
 
