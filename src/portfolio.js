@@ -524,8 +524,13 @@ const games = {
       name: 'Tik Tak Toe',
       url: 'tik-tak-toe',
       description: "A game in which two players seek in alternate turns to complete a row, a column, or a diagonal with either three O's or three X's drawn in the spaces of a grid of nine squares; noughts and crosses."
-    }
+    },
+  1: {
+    name: '2048',
+    url: '2048',
+    description: "A sliding tile puzzle with the objective to slide numbered tiles on a grid to combine them to create a tile with the number 2048; however, one can continue to play the game after reaching the goal, creating tiles with larger numbers."
   }
+}
 }
 
 const documentTitles = {

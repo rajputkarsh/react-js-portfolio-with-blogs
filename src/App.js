@@ -27,7 +27,13 @@ function App() {
           <Main theme={themes[usingTheme]} setTheme={setUsingTheme} />
           <ToastContainer />
         </div>
-      <Footer theme={themes[usingTheme]} setTheme={setUsingTheme} />
+        {
+          window.location.href.includes("splash") ?
+            ""
+          :
+            <Footer theme={themes[usingTheme]} setTheme={setUsingTheme} />
+        }
+
     </ThemeProvider>
   );
 }

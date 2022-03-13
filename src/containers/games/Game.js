@@ -9,6 +9,7 @@ import './Game.modules.css';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { firebaseConfig } from "../../backend"; 
+import Game2048 from '../../components/games/2048/Game2048';
 
 function Game(props) {
 
@@ -20,8 +21,9 @@ function Game(props) {
     getAnalytics(app);
 
     const getGameComponent = (gameUrl) => {
-        switch(gameUrl){
-            case 'tik-tak-toe' : return <TikTakToe theme={props.theme} setTheme={props.setTheme} />;
+        switch (gameUrl) {
+            case 'tik-tak-toe'  : return <TikTakToe theme={props.theme} setTheme={props.setTheme} />;
+            case '2048'         : return <Game2048 theme={props.theme} setTheme={props.setTheme} />;
 
             default: return <NotFoundContent theme={props.theme} setTheme={props.setTheme} />
         }

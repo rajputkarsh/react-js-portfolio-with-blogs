@@ -6,9 +6,6 @@ function AnimatedSplash(props) {
 
   document.title = documentTitles.splash;
 
-
-
-
   return (
     <div className="logo_wrapper">
       <div className="loading">
