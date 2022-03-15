@@ -331,6 +331,29 @@ const projects = {
     },
     {
       id: "1",
+      name: "Food Delivery (Frontend)",
+      url: "https://github.com/rajputkarsh/food-delivery",
+      description: "The frontend of a food delivery application.",
+      demo: "https://food-delivery-69e51.web.app/",
+      languages: [
+        {
+          name: "ReactJS",
+          iconifyClass: "logos-react",
+        },
+        {
+          name: "CSS3",
+          iconifyClass: "vscode-icons:file-type-css",
+        },
+        {
+          name: "Firebase",
+          iconifyClass: "logos-firebase",
+        },
+      ],
+    },
+
+    
+    {
+      id: "2",
       name: "Smart Hand Glove",
       url: "https://github.com/rajputkarsh/smart-hand-glove",
       description: "This project is an IoT project consisting of a glove which analyses its position and movement and generates a word for hand gesture. These words are then converted to sentences.",
@@ -350,7 +373,7 @@ const projects = {
       ],
     },
     {
-      id: "2",
+      id: "3",
       name: "Sudoku Game",
       url: "https://github.com/rajputkarsh/Sudoku-Backtracking",
       description:
@@ -371,7 +394,7 @@ const projects = {
       ],
     },
     {
-      id: "3",
+      id: "4",
       name: "Minesweeper Game",
       url: "https://github.com/rajputkarsh/minesweeper_game",
       description:
@@ -388,7 +411,7 @@ const projects = {
       ],
     },
     {
-      id: "4",
+      id: "5",
       name: "Hybrid mobile application",
       url: "https://github.com/rajputkarsh/AndroidApp",
       description:
@@ -416,7 +439,7 @@ const projects = {
       ],
     },
     {
-      id: "5",
+      id: "6",
       name: "Manage IT (Frontend)",
       url: "https://github.com/rajputkarsh/private_repo",
       description:
@@ -441,7 +464,7 @@ const projects = {
       ],
     },
     {
-      id: "6",
+      id: "7",
       name: "Manage IT (Backend)",
       url: "https://github.com/rajputkarsh/private_repo",
       description:
@@ -458,7 +481,7 @@ const projects = {
       ],
     },
     {
-      id: "7",
+      id: "8",
       name: "Artificial Doctor",
       url: "https://github.com/rajputkarsh/private_repo",
       description:
@@ -475,7 +498,7 @@ const projects = {
       ],
     },
     {
-      id: "8",
+      id: "9",
       name: "Biometric Manager",
       url: "https://github.com/rajputkarsh/private_repo",
       description:
