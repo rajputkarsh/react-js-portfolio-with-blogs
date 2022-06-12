@@ -36,6 +36,19 @@ body {
   min-height: 90vh;
 }
 
+pre{
+    display: block;
+    font-size: 87.5%;
+    color: none;
+    border: 1px solid rebeccapurple;
+    padding: 8px;
+    width: fit-content;
+    border-radius: 15px;
+    white-space: pre-line;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
 /* Animations */
 @keyframes fade_down {
   0% {
