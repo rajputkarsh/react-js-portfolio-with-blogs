@@ -1,0 +1,175 @@
+.blog-add-main {
+  width: 100vw;
+  text-align: center;
+}
+
+.basic-blog-add {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.blog-add-heading-div {
+  display: flex;
+}
+
+.blog-add-heading-div > * {
+  flex: 1;
+}
+
+.blog-add-heading-img-div {
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-add-heading-text-div {
+  text-align: center;
+}
+
+.blog-add-heading-img-div > * {
+  max-width: 100%;
+  height: auto;
+}
+
+.blog-add-heading-text {
+  font-size: 56px;
+  font-weight: 400;
+  font-family: "Google Sans Medium";
+  line-height: 1.1;
+  text-align: center;
+}
+
+.blog-add-heading-sub-text {
+  font-size: 30px;
+  font-family: "Google Sans Regular";
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.blog-add-header-detail-text {
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: "Google Sans Medium";
+}
+
+.repo-cards-div-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem 1rem;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 60px;
+}
+
+@media (max-width: 1380px) {
+  .blog-add-heading-text {
+    font-size: 50px;
+  }
+  .blog-add-heading-sub-text {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-add-heading-text {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+
+  .blog-add-heading-sub-text {
+    font-size: 20px;
+  }
+
+  .blog-add-heading-div {
+    flex-direction: column;
+  }
+
+  .blog-add-header-detail-text {
+    font-size: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .repo-cards-div-main {
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+  }
+}
+
+.add-blog-details{
+  width: 100vw;
+}
+
+.add-blog-form{
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.form-group{
+  text-align: left;
+}
+
+.left-padded{
+  padding-left:20px
+}
+
+.add-blog-buttons{
+  margin-top: 50px;
+}
+
+.generatedHTML{
+  margin: 10px 40px;
+  padding: 10px 0px;
+  border: 2px solid #a82e38 ;
+  border-radius: 10px;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.copyButton {
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.copyButton:hover {
+  background-color: #4CAF50;
+  color: white !important;
+}
+
+.showButton {
+  color: black; 
+  border: 2px solid #a82e38;
+}
+
+.showButton:hover {
+  background-color: #a82e38;
+  color: white !important;
+}
+
+.publishButton {
+  color: black; 
+  border: 2px solid #7418a8;
+}
+
+.publishButton:hover {
+  background-color: #7418a8;
+  color: white !important;
+}
