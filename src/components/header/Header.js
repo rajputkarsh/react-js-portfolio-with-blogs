@@ -68,8 +68,8 @@ function Header(props) {
 
   return (
     <Fade top duration={1000} distance="20px">
-      <div className="header-container">
-        <header className="header" style={{ boxShadow: "0px 0px 10px 5px rgba(0, 0, 0, 0.2)" }}>
+      <div className="header-container" style={{backgroundColor: props.theme.body }}>
+        <header className="header" style={{ boxShadow: "0px 0px 10px 5px rgba(0, 0, 0, 0.2)", backgroundColor: props.theme.body  }}>
           <NavLink to={link} tag={Link} className="logo">
             <span style={{ color: theme.text }}></span>
             <span className="logo-name" style={{ color: theme.text }}>
