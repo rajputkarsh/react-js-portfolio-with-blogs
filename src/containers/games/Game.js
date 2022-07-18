@@ -30,15 +30,17 @@ function Game(props) {
     }
 
     return (
-        <div className='game-main'>
+        <>
             <Header theme={props.theme} setTheme={props.setTheme} />
+            <div className='game-main'>
 
-            <div className="game">
-                {
-                    getGameComponent(gameSlug)
-                }
+                <div className="game">
+                    {
+                        getGameComponent(gameSlug)
+                    }
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 

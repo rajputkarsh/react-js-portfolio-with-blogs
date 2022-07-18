@@ -149,65 +149,67 @@ function AddBlog(props) {
     }
 
     return (
-        <div className="blog-add-main">
+        <>
             <Header theme={theme} setTheme={props.setTheme} />
-            <div className="basic-blog-add">
-                <Fade bottom duration={2000} distance="40px">
-                    <div className="blog-add-heading-div">
-                        <div className="blog-add-heading-text-div">
-                            <h1
-                                className="blog-add-heading-text"
-                                style={{ color: theme.text }}
-                            >
-                                Add a blog to the website
-                            </h1>
-                            <p
-                                className="blog-add-header-detail-text subTitle"
-                                style={{ color: theme.secondaryText }}
-                            >
-                                Use the below given editor to write the blog
-                            </p>
+            <div className="blog-add-main">
+                <div className="basic-blog-add">
+                    <Fade bottom duration={2000} distance="40px">
+                        <div className="blog-add-heading-div">
+                            <div className="blog-add-heading-text-div">
+                                <h1
+                                    className="blog-add-heading-text"
+                                    style={{ color: theme.text }}
+                                >
+                                    Add a blog to the website
+                                </h1>
+                                <p
+                                    className="blog-add-header-detail-text subTitle"
+                                    style={{ color: theme.secondaryText }}
+                                >
+                                    Use the below given editor to write the blog
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </Fade>
-            </div>
-            <div className="add-blog-details">
-                <Form className="add-blog-form">
-                    <Form.Group  controlId="formGroupBlogTitle">
-                        <Form.Label className="left-padded">Blog Title</Form.Label>
-                        <Form.Control type="text" value={blogTitle} onChange={(e) => {handleTitleChange(e.target.value)}} placeholder="Blog Title" />
-                    </Form.Group>
-                    <Form.Group controlId="formGroupBlogSlug">
-                        <Form.Label className="left-padded">Blog Slug</Form.Label>
-                        <Form.Control type="text" value={blogSlug} onChange={(e) => { setBlogSlug(e.target.value) }} placeholder="Blog Slug" />
-                    </Form.Group>
-                    <Form.Group controlId="formGroupBlogDescription">
-                        <Form.Label className="left-padded">Blog Description</Form.Label>
-                        <Form.Control type="text" value={blogDescription} onChange={(e) => { setBlogDescription(e.target.value) }} placeholder="Blog Description" />
-                    </Form.Group>
-                </Form>
-            </div>
-            <div className="repo-cards-div-main">
-                <ReactQuill theme="snow" value={blogText} onChange={setBlogText} />
-            </div>
-            
-            <div className="add-blog-buttons">
-                <Button type="button" className="button copyButton" variant="outline-dark" style={{ color: theme.text }} onClick={() => { copyTextToClipboard() }}>Copy HTML</Button>
-                <Button type="button" className="button showButton" variant="outline-dark" style={{ color: theme.text }} onClick={() => { showText() }}>{isTextShowing ? "Hide" : "Show"} HTML</Button>
-                <Button type="button" className="button publishButton" variant="outline-dark" style={{ color: theme.text }} onClick={() => { publishBlog() }}>Publish Blog</Button>
-            </div>
+                    </Fade>
+                </div>
+                <div className="add-blog-details">
+                    <Form className="add-blog-form">
+                        <Form.Group  controlId="formGroupBlogTitle">
+                            <Form.Label className="left-padded">Blog Title</Form.Label>
+                            <Form.Control type="text" value={blogTitle} onChange={(e) => {handleTitleChange(e.target.value)}} placeholder="Blog Title" />
+                        </Form.Group>
+                        <Form.Group controlId="formGroupBlogSlug">
+                            <Form.Label className="left-padded">Blog Slug</Form.Label>
+                            <Form.Control type="text" value={blogSlug} onChange={(e) => { setBlogSlug(e.target.value) }} placeholder="Blog Slug" />
+                        </Form.Group>
+                        <Form.Group controlId="formGroupBlogDescription">
+                            <Form.Label className="left-padded">Blog Description</Form.Label>
+                            <Form.Control type="text" value={blogDescription} onChange={(e) => { setBlogDescription(e.target.value) }} placeholder="Blog Description" />
+                        </Form.Group>
+                    </Form>
+                </div>
+                <div className="repo-cards-div-main">
+                    <ReactQuill theme="snow" value={blogText} onChange={setBlogText} />
+                </div>
+                
+                <div className="add-blog-buttons">
+                    <Button type="button" className="button copyButton" variant="outline-dark" style={{ color: theme.text }} onClick={() => { copyTextToClipboard() }}>Copy HTML</Button>
+                    <Button type="button" className="button showButton" variant="outline-dark" style={{ color: theme.text }} onClick={() => { showText() }}>{isTextShowing ? "Hide" : "Show"} HTML</Button>
+                    <Button type="button" className="button publishButton" variant="outline-dark" style={{ color: theme.text }} onClick={() => { publishBlog() }}>Publish Blog</Button>
+                </div>
 
 
 
-            {
-                isTextShowing ? (
-                    <div className="generatedHTML">{blogText}</div>
-                ):
-                (
-                    ""
-                )
-            }
-        </div>
+                {
+                    isTextShowing ? (
+                        <div className="generatedHTML">{blogText}</div>
+                    ):
+                    (
+                        ""
+                    )
+                }
+            </div>
+        </>
     );
 }
 

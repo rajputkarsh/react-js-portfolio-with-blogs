@@ -49,47 +49,48 @@ function Blogs(props) {
     }, []);
 
     return (
-        <div className="blogs-main">
+        <>
             <Header theme={theme} setTheme={props.setTheme} />
-            <div className="basic-blogs">
-                <Fade bottom duration={2000} distance="40px">
-                    <div className="blogs-heading-div">
-                        <div className="blogs-heading-text-div">
-                            <h1
-                                className="blogs-heading-text"
-                                style={{ color: theme.text }}
-                            >
-                                {blogsHeader.title}
-                            </h1>
-                            <p
-                                className="blogs-header-detail-text subTitle"
-                                style={{ color: theme.secondaryText }}
-                            >
-                                {blogsHeader["description"]}
-                            </p>
-                            <button {...styles} className="general-btn" onClick={() => { window.open(blogsHeader.link, "_blank") }}>
-                                My LinkedIn Profile
-                            </button>                            
+            <div className="blogs-main">
+                <div className="basic-blogs">
+                    <Fade bottom duration={2000} distance="40px">
+                        <div className="blogs-heading-div">
+                            <div className="blogs-heading-text-div">
+                                <h1
+                                    className="blogs-heading-text"
+                                    style={{ color: theme.text }}
+                                >
+                                    {blogsHeader.title}
+                                </h1>
+                                <p
+                                    className="blogs-header-detail-text subTitle"
+                                    style={{ color: theme.secondaryText }}
+                                >
+                                    {blogsHeader["description"]}
+                                </p>
+                                <button {...styles} className="general-btn" onClick={() => { window.open(blogsHeader.link, "_blank") }}>
+                                    My LinkedIn Profile
+                                </button>                            
+                            </div>
                         </div>
-                    </div>
-                </Fade>
-            </div>
-            <div className="repo-cards-div-main">
+                    </Fade>
+                </div>
+                <div className="repo-cards-div-main">
 
-                {
-                    blogList.length > 0 
-                    ?
-                        blogList.map( 
-                            (blog) => (
-                                <BlogCard key={blog.slug} blog={blog} theme={theme} />
+                    {
+                        blogList.length > 0 
+                        ?
+                            blogList.map( 
+                                (blog) => (
+                                    <BlogCard key={blog.slug} blog={blog} theme={theme} />
+                                )
                             )
-                        )
-                    : 
-                    ""
-                }
-            </div>
-
-        </div>
+                        : 
+                        ""
+                    }
+                </div>
+            </div>            
+        </>
     );
 }
 

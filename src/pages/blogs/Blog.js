@@ -56,12 +56,13 @@ function Blogs(props) {
     }
 
     const getReadTime = () => {
-        return getWordCount(blog[blogSlug].content ) / AVERAGE_WORDS_READ_PER_MINUTE;
+        return Math.round( (getWordCount(blog[blogSlug].content ) / AVERAGE_WORDS_READ_PER_MINUTE) * 100) / 100 ;
     }
 
     return (
-        <div className="blogs-main">
+        <>
             <Header theme={theme} setTheme={props.setTheme} />
+            <div className="blogs-main">
             <br />
             <div className="basic-blogs">
                 <Fade bottom duration={2000} distance="40px">
@@ -77,25 +78,25 @@ function Blogs(props) {
                                 </div>
 
                                 <div className="blogs-information-div">
-                                    <span> Author - <b>{ blog[blogSlug]?.author?.name || DEFAULT_AUTHOR.name }</b> </span>
+                                    <span> <b>Author - { blog[blogSlug]?.author?.name || DEFAULT_AUTHOR.name }</b> </span>
                                 </div>
                                 
                                 <div className="blogs-information-div">
-                                    <span>Updated On - {new Intl.DateTimeFormat('en-IN', { dateStyle: 'full', timeStyle: 'long' }).format(new Date(blog[blogSlug].dateUpdated.seconds * 1000))} </span>
-                                    <span> Total Reading time - { getReadTime() } minutes </span>
+                                    <span><b>Updated On -</b> {new Intl.DateTimeFormat('en-IN', { dateStyle: 'full', timeStyle: 'long' }).format(new Date(blog[blogSlug].dateUpdated.seconds * 1000))} </span>
+                                    <span> <b>Reading time -</b> { getReadTime() } mins </span>
                                 </div>
 
                                 <div className="blog-text" dangerouslySetInnerHTML={{ __html: blog[blogSlug].content }}></div>
                             
                                 <br />
                             
-                                <div className="blog-info">
+                                {/* <div className="blog-info">
                                     Total Views - { (Number(blog[blogSlug].views) ? Number(blog[blogSlug].views)  : 0) + 1 }
                                     Total Likes - 
                                     Comments    - 
-                                </div>
+                                </div> */}
 
-                                <button onClick={handleLike}> Like this Blog</button>
+                                {/* <button onClick={handleLike}> Like this Blog</button> */}
 
                             </>                            
                         )
@@ -104,7 +105,9 @@ function Blogs(props) {
 
                 </Fade>
             </div>
-        </div>
+        </div>            
+        </>
+
     );
 }
 

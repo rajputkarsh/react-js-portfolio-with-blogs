@@ -11,6 +11,7 @@ pre {
 
 .blogs-main {
   width: 100vw;
+  padding-top: 15vh;
 }
 
 .basic-blogs {
@@ -90,6 +91,14 @@ pre {
     margin-top: 20px;
   }
 
+  .blogs-information-div {
+    display: block;
+  }    
+
+  .blogs-information-div span {
+    display: block;
+  }  
+
   .blogs-heading-sub-text {
     font-size: 20px;
   }
@@ -114,6 +123,7 @@ pre {
 }
 
 .blog-text{
+    overflow-x: hidden;
     margin-top: 15vh;
     text-align: left;
 }

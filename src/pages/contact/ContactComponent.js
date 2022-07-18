@@ -49,8 +49,9 @@ function Contact(props) {
   };
 
   return (
+    <>
+    <Header theme={theme} setTheme={props.setTheme} />
     <div className="contact-main">
-      <Header theme={theme} setTheme={props.setTheme} />
       <div className="basic-contact">
         <Fade bottom duration={1000} distance="40px">
           <div className="contact-heading-div">
@@ -106,7 +107,9 @@ function Contact(props) {
           </div>
         </Fade>
       </div>
-    </div>
+    </div>    
+    </>
+
   );
 }
 

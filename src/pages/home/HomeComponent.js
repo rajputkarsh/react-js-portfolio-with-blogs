@@ -8,6 +8,8 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { firebaseConfig } from "../../backend";
 
+import "./HomeComponent.modules.css"
+
 function Home(props) {
 
   document.title = documentTitles.home;
@@ -17,8 +19,8 @@ function Home(props) {
 
   return (
     <div>
+      <Header theme={props.theme} setTheme={props.setTheme} />
       <div className="home-content">
-        <Header theme={props.theme} setTheme={props.setTheme} />
         <Greeting theme={props.theme} />
         <Skills theme={props.theme} />        
       </div>
