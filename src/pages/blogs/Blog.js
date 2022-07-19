@@ -25,6 +25,7 @@ function Blogs(props) {
 
     const [blog, setBlog] = useState({});
     const [isBlogFetched, setBlogFetched] = useState(false);
+    const [readTime, setReadTime] = useState(0);
 
     const blogRef      = doc(database, "blogs", blogSlug);
     const blogContent  = {};
@@ -40,6 +41,8 @@ function Blogs(props) {
                     setBlogFetched(true);
                 })
 
+            let readingTime = getReadTime();
+            setReadTime( `${Math.floor(readingTime)} mins ${(readingTime - Math.floor(readingTime))*60} seconds` )
         }
     , [])
 
@@ -83,7 +86,7 @@ function Blogs(props) {
                                 
                                 <div className="blogs-information-div">
                                     <span><b>Updated On -</b> {new Intl.DateTimeFormat('en-IN', { dateStyle: 'full', timeStyle: 'long' }).format(new Date(blog[blogSlug].dateUpdated.seconds * 1000))} </span>
-                                    <span> <b>Reading time -</b> { getReadTime() } mins </span>
+                                    <span> <b>Reading time -</b> { readTime } </span>
                                 </div>
 
                                 <div className="blog-text" dangerouslySetInnerHTML={{ __html: blog[blogSlug].content }}></div>
