@@ -563,7 +563,7 @@ const contactPageData = {
 // Blogs page
 const blogsHeader = {
   title: "Blogs",
-  description: "I try writing in different domains of technology. Below is a list of some of my recent blogs. If you like the content, or would to read more such content, here's a link of my Linked Profile",
+  description: "I try writing in different domains of technology. Below is a list of some of my recent blogs. If you like the content, or would to read more such content, here's a link of my LinkedIn Profile",
   link: "https://www.linkedin.com/in/utkarsh-rajput/",
 }
 

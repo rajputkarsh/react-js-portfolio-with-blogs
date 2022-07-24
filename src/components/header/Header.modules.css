@@ -4,7 +4,6 @@
   display: block;
   box-shadow:  0px 0px 10px 5px rgb(0, 0, 0, 0.20);
   padding: 0px 10px;
-  margin-bottom: 8vh;
   z-index: 999;
   background-color: #FFF;
 }
@@ -110,7 +109,7 @@
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 390px;
+  max-height: 420px;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {

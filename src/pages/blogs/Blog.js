@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../../components/header/Header";
 import { Fade } from "react-reveal";
 import { useParams } from 'react-router-dom';
-import "./Blog.modules.css";
+import "./Blog.modules.css"
 import { AVERAGE_WORDS_READ_PER_MINUTE, DEFAULT_AUTHOR, documentTitles } from "../../portfolio.js";
 
 import { initializeApp } from "firebase/app";
@@ -25,7 +25,6 @@ function Blogs(props) {
 
     const [blog, setBlog] = useState({});
     const [isBlogFetched, setBlogFetched] = useState(false);
-    const [readTime, setReadTime] = useState(0);
 
     const blogRef      = doc(database, "blogs", blogSlug);
     const blogContent  = {};
@@ -41,8 +40,6 @@ function Blogs(props) {
                     setBlogFetched(true);
                 })
 
-            let readingTime = getReadTime();
-            setReadTime( `${Math.floor(readingTime)} mins ${(readingTime - Math.floor(readingTime))*60} seconds` )
         }
     , [])
 
@@ -65,7 +62,7 @@ function Blogs(props) {
     return (
         <>
             <Header theme={theme} setTheme={props.setTheme} />
-            <div className="blogs-main">
+             <div className="blogs-main">
             <br />
             <div className="basic-blogs">
                 <Fade bottom duration={2000} distance="40px">
@@ -86,7 +83,7 @@ function Blogs(props) {
                                 
                                 <div className="blogs-information-div">
                                     <span><b>Updated On -</b> {new Intl.DateTimeFormat('en-IN', { dateStyle: 'full', timeStyle: 'long' }).format(new Date(blog[blogSlug].dateUpdated.seconds * 1000))} </span>
-                                    <span> <b>Reading time -</b> { readTime } </span>
+                                    <span> <b>Reading time -</b> { getReadTime() } mins </span>
                                 </div>
 
                                 <div className="blog-text" dangerouslySetInnerHTML={{ __html: blog[blogSlug].content }}></div>
@@ -108,9 +105,8 @@ function Blogs(props) {
 
                 </Fade>
             </div>
-        </div>            
+        </div>           
         </>
-
     );
 }
 

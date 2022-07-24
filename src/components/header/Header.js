@@ -21,7 +21,7 @@ function Header(props) {
     width: "45px",
     marginRight: "5px",
     marginLeft: "15px",
-    paddingTop: "5px",
+    paddingTop: "0px",
     borderRadius: "50%",
     border: "none",
     alignItems: "center",

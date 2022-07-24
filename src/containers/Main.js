@@ -18,7 +18,10 @@ import Game from "./games/Game";
 export default function Main(propss) {
 
   useEffect(() => {
+
     propss.theme.name === "light" ? document.body.className = "light" : document.body.className = "dark";
+    window.scrollTo(0, 0);
+
   }, [])
 
 
